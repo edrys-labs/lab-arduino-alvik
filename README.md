@@ -2,6 +2,14 @@
 
 An interactive remote laboratory for programming the Arduino Alvik robot with MicroPython.
 
+Import the lab into your Edrys classroom using the following link:
+
+https://raw.githubusercontent.com/edrys-labs/lab-arduino-alvik/refs/heads/main/alvik_lab.yaml
+
+or just click the deploy button below:
+
+[<img src="https://img.shields.io/badge/%F0%9F%9A%80%20-%20Deploy%20Lab%20-%20light?style=plastic" height="25" />](https://edrys-labs.github.io/?/deploy/https://raw.githubusercontent.com/edrys-labs/lab-arduino-alvik/refs/heads/main/alvik_lab.yaml)
+
 ## Overview
 
 This laboratory practicum offers students the opportunity to learn the basics of programming embedded systems with MicroPython – directly using the Arduino Alvik robot as an example. The lab is accessible as a remote laboratory through the Edrys platform, allowing students to experiment with real hardware from anywhere.
