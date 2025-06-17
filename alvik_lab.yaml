@@ -1,0 +1,357 @@
+id: 15sg55K8KHkNdsdsdKJHASKJHSKJGH5454sdsdsc 
+createdBy: o3ff8o6DhNXC
+dateCreated: 1750146181
+name: Arduino Alvik Lab
+meta:
+  logo: >-
+    https://raw.githubusercontent.com/edrys-labs/lab-arduino-alvik/main/media/alvik.jpg
+  description: >-
+    Die Studierenden entwickeln eine Anwendung für den Arduino Alvik-Roboter, 
+    bei der verschiedene Sensoren und Aktoren über bereitgestellte Klassen angesteuert werden. 
+    Ziel ist es, eine autonome Fahrfunktion zu realisieren, bei der der Roboter Hindernisse erkennt und entsprechend ausweicht. 
+    Zusätzlich wird der Programmcode über eine serielle Schnittstelle hochgeladen und getestet.
+  selfAssign: true
+  defaultNumberOfRooms: '1'
+members:
+  teacher: []
+  student: []
+modules:
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: >-
+        # Arduino Alvik Lab – Einführung in MicroPython & Robotik
+
+
+        Liebe Teilnehmerinnen und Teilnehmer,
+
+
+        dieses Laborpraktikum bietet Ihnen die Möglichkeit, 
+        den Einstieg in die Programmierung von eingebetteten Systemen mit MicroPython zu erlernen – 
+        direkt am Beispiel des Arduino Alvik Roboters.
+
+
+        Im Mittelpunkt steht nicht die Lösung eines vorgegebenen Problems, 
+        sondern die freie Auseinandersetzung mit den Möglichkeiten, die Ihnen der Roboter bietet: 
+        Sie können Sensoren auslesen, Motoren steuern, LEDs nutzen oder eigene kleine Fahrstrategien entwickeln.
+
+
+        Sie können Ihre Programme direkt aus dem Editor heraus auf das reale Gerät hochladen und testen. 
+        Bitte beachten Sie, ob bereits jemand an der Station arbeitet, bevor Sie Ihren Code hochladen. 
+        Der letzte Programmzustand bleibt erhalten, also verlassen Sie die Station bitte in einem nachvollziehbaren Zustand.
+
+
+        In **Raum 1** erhalten Sie grundlegende Informationen zum Alvik-Roboter und zur Lernziele dieses Labors.
+        Die praktische Umsetzung erfolgt in der **Station**, wo Sie den Alvik-Roboter über die WebREPL-Schnittstelle programmieren können.
+
+
+        Die Aufgabe ist bewusst offen gehalten – Sie sollen eigene Ideen ausprobieren, 
+        mit der Hardware experimentieren und ein Gefühl für die Programmierung eingebetteter Systeme entwickeln. 
+        Bei Fragen oder technischen Problemen stehen Ihnen unsere Betreuer selbstverständlich zur Seite.
+
+
+        > Ihre Codeänderungen werden auf der Station **anonymisiert** gespeichert. 
+        Wir wollen damit tatsächliche Problemfelder identifizieren, um damit die
+        Veranstaltung systematisch weiterzuentwickeln. Aus den Daten
+        können keine Rückschlüsse auf den Teilnehmenden oder spezifika des
+        Rechners gezogen werden. Wenn Sie Fragen dazu haben, sprechen Sie uns gern an.
+
+
+        Wir freuen uns auf Ihr Feedback und Ihre Anregungen.
+
+
+        _Ihr CrossLab Team_
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: lobby
+    width: full
+    height: huge
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config: 
+      content: >-
+        # Tutorial für Studierende
+
+
+        Ein kurzes Einführungsvideo zu Edrys und der Nutzung der Remote-Labore
+
+
+        <video controls src="https://github.com/edrys-labs/lab-arduino-alvik/raw/refs/heads/main/media/demo.webm" width="100%">
+        Sorry, your browser doesn't support embedded videos, but don’t worry, you can
+        <a href="https://github.com/edrys-labs/lab-arduino-alvik/raw/refs/heads/main/media/demo.webm">download it</a>
+        and watch it with your favorite video player!
+        </video>
+          
+    studentConfig: 
+      content: ''
+    teacherConfig: 
+      content: ''
+    stationConfig: 
+      content: ''
+    showInCustom: lobby
+    width: full
+    height: 600
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: >-
+        # Aufgabeninhalt
+
+
+        ## Lernziele
+
+
+        * Erste Schritte mit der Programmierung von eingebetteten Systemen in MicroPython
+
+        * Kennenlernen der Hardware-Funktionen des Arduino Alvik Roboters (Sensoren, Motoren, LEDs)
+
+        * Eigenständiges Experimentieren mit Roboterfunktionen wie Fahren, Linienverfolgung, Hinderniserkennung
+
+        * Nutzung der seriellen Schnittstelle zur Kommunikation und Fehleranalyse
+
+        * Entwicklung strukturierter, wiederverwendbarer Programme in MicroPython
+        
+
+        ## Aufgabenstellung
+
+
+        Diese Aufgabe ist offen gestaltet, das heißt: Es gibt keine feste Vorgabe, sondern Sie haben die Möglichkeit, 
+        eigenständig eine kleine Anwendung mit dem Alvik-Roboter zu entwickeln. Mögliche Beispiele:
+
+        * Schreiben Sie ein Programm, das den Roboter eine gerade Strecke fahren lässt und bei Hindernissen automatisch stoppt.
+
+        * Experimentieren Sie mit den Linienfolgesensoren und versuchen Sie, eine einfache Linienverfolgung zu realisieren.
+
+        * Nutzen Sie die LEDs, um den Systemzustand (z. B. Hindernis erkannt) visuell anzuzeigen.
+
+        * Schreiben Sie den Abstand zu Hindernissen kontinuierlich über die serielle Schnittstelle.
+
+
+        Sie können jederzeit eigene Ideen umsetzen und die vielfältigen Funktionen des Alvik nutzen. 
+        Nutzen Sie diese Gelegenheit, um verschiedene Sensoren und Aktoren auszuprobieren – und dabei MicroPython praxisnah zu erlernen.
+
+
+        ## Technische Basis
+
+        Die Umsetzung erfolgt auf einem Arduino Alvik Roboter mit ESP32-S3 Mikrocontroller, der remote über **WebREPL*** programmiert werden kann.
+
+
+        | Bautteil                                   | Funktion                 | Bezeichnung       |
+
+        | ------------------------------------------ | ------------------------ | ----------------- |
+
+        | ESP32-S3 Mikrocontroller                   | Zentrale Steuerung       |                   |
+
+        | STM32 Mikrocontroller                      | Zusätzliche Steuerung    |                   |
+
+        | ToF (Time of Flight) 8x8 Array             | Abstandsmessung          | LSM6DSOX          |
+
+        | Liniensensor (3x)                          | Linienverfolgung         |                   |
+
+        | Farbsensor                                 | Farbdetektor             | APDS 9660         |
+
+        | IMU - 6 degree                             | Orientierungsmessung     | VL53L7CX          |
+
+        | RGB-LED (2x)                               | Statusanzeige            |                   |
+
+        | Taster (7x)                                | Benutzereingabe          |                   |
+
+
+        Für zusätzliche Informationen und technische Details zum Arduino Alvik:
+
+        * [Arduino Alvik User Manual](https://docs.arduino.cc/tutorials/alvik/user-manual/)
+
+        * [Arduino Alvik API](https://docs.arduino.cc/tutorials/alvik/api-overview/)
+
+
+        ***WebREPL**: Standard für die Kommunikation mit und die Steuerung eines MicroPython-basierten Boards
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: Room 1
+    width: full
+    height: tall
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: >-
+        # Arduino Alvik Top Layout
+
+
+        ![AlvikTop](https://docs.arduino.cc/static/efb86c880e9b4c888544794719d72857/a6d36/up-components.png)
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: Room 1
+    width: 700
+    height: 500
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: >-
+        # Arduino Alvik Bottom Layout
+
+
+        ![AlvikBottom](https://docs.arduino.cc/static/215a266b18db8f85de28820f3800eee7/a6d36/down-components.png)
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: Room 1
+    width: 700
+    height: 500
+  - url: https://edrys-labs.github.io/module-editor/index.html
+    config:
+      editorText: |-
+        # Type your code here
+      runCommand: execute
+      language: cpp
+      theme: light
+    showInCustom: station
+    width: full
+    height: medium
+  - url: https://edrys-labs.github.io/module-station-stream/index.html
+    stationConfig:
+      video: true
+      audio: false
+    showInCustom: station
+    width: half
+    height: medium
+  - url: https://edrys-labs.github.io/module-micropython-webrepl/
+    config: ''
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig: ''
+    showInCustom: station
+    width: full
+    height: tall
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: >-
+        # Alvik Einstieg mit MicroPython
+
+
+        > Diese Station zielt darauf ab, Ihre Fähigkeiten im Umgang mit eingebetteten Systemen zu fördern. 
+        Sie programmieren den Alvik-Roboter mit MicroPython, um grundlegende Funktionen wie Bewegung, 
+        Sensorabfrage und Ausgabe zu realisieren.
+
+
+        Der Alvik-Roboter basiert auf einem ESP32-S3 Mikrocontroller und kann über die Weboberfläche mit MicroPython programmiert werden. 
+        Die Sensorik und Aktorik ist direkt ansprechbar durch die Alvik API.
+
+        Ziel ist es, sich mit der Roboterplattform vertraut zu machen, 
+        einfache Steuerungen zu entwickeln und Sensordaten zu verarbeiten und darzustellen.
+
+        ## Verbindung zum Alvik
+
+        Der Alvik ist über WebREPL mit dem Browser verbunden.
+        Falls die Verbindung unterbrochen wurde, 
+        klicken Sie einfach auf „Connect“ im WebREPL-Terminal Modul und geben Sie das Passwort ein: 1234.
+
+
+        ## Beispielcode für eine einfache Linienverfolgung
+
+
+        ```python
+
+        from arduino_alvik import ArduinoAlvik
+
+        from time import sleep_ms
+
+        import sys
+
+
+        def calculate_center(left: int, center: int, right: int):
+            centroid = 0
+            sum_weight = left + center + right
+            sum_values = left + 2 * center + 3 * right
+            if sum_weight != 0:
+                centroid = sum_values / sum_weight
+                centroid = 2 - centroid
+            return centroid
+
+
+        alvik = ArduinoAlvik()
+
+        alvik.begin()
+
+
+        error = 0
+
+        control = 0
+
+        kp = 50.0
+
+        # Set initial LED colors to indicate ready state
+
+        alvik.left_led.set_color(0, 1, 0)  # Green = ready
+
+        alvik.right_led.set_color(0, 1, 0)  # Green = ready
+
+
+        print("Starting autonomous line following...")
+
+        sleep_ms(1000)  # Brief pause before starting
+
+
+        try:
+            while True:
+                # Get line sensor readings
+                line_sensors = alvik.get_line_sensors()
+                print(f'Line sensors: {line_sensors}')
+                
+                # Calculate error and control signal
+                error = calculate_center(*line_sensors)
+                control = error * kp
+                
+                # Update LEDs based on steering direction
+                if control > 0.2:
+                    alvik.left_led.set_color(1, 0, 0)  # Red left = turning left
+                    alvik.right_led.set_color(0, 0, 0)  # Off
+                elif control < -0.2:
+                    alvik.left_led.set_color(0, 0, 0)  # Off
+                    alvik.right_led.set_color(1, 0, 0)  # Red right = turning right
+                else:
+                    alvik.left_led.set_color(0, 1, 0)  # Green = going straight
+                    alvik.right_led.set_color(0, 1, 0)  # Green = going straight
+                
+                # Set wheel speeds for line following
+                alvik.set_wheels_speed(30 - control, 30 + control)
+                
+                sleep_ms(100)
+
+        except KeyboardInterrupt:
+            print('Line following stopped')
+            alvik.brake()
+            alvik.stop()
+            sys.exit()
+
+        ```
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: station
+    width: half
+    height: tall
+  - url: https://edrys-labs.github.io/module-code-logger/
+    config:
+      content: ''
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: station, station-only
+    width: full
+    height: tall
