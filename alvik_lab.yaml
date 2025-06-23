@@ -212,7 +212,7 @@ modules:
       editorText: |-
         # Type your code here
       runCommand: execute
-      language: cpp
+      language: python
       theme: light
     showInCustom: station
     width: full
@@ -344,14 +344,10 @@ modules:
     width: half
     height: tall
   - url: https://edrys-labs.github.io/module-code-logger/
-    config:
-      content: ''
-    studentConfig:
-      content: ''
-    teacherConfig:
-      content: ''
-    stationConfig:
-      content: ''
+    config: ''
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig: ''
     showInCustom: station, station-only
     width: full
     height: tall
