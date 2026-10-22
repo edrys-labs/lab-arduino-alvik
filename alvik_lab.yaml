@@ -207,17 +207,19 @@ modules:
     showInCustom: Room 1
     width: 700
     height: 500
-  - url: https://edrys-labs.github.io/module-editor/index.html
+  - url: https://edrys-labs.github.io/module-monaco-editor/
     config:
-      editorText: |-
+      synchronize: true
+      showLanguageSelector: true
+      value: |-
         # Type your code here
       runCommand: execute
       language: python
-      theme: light
+      theme: vs-light
     showInCustom: station
     width: full
     height: medium
-  - url: https://edrys-labs.github.io/module-station-stream/index.html
+  - url: https://edrys-labs.github.io/module-streaming/index.html
     stationConfig:
       video: true
       audio: false
